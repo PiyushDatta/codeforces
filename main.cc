@@ -1,13 +1,26 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// DEFINE
-#define _MY_TEST_FILES false
+// uncomment this line when submitting
+#define _MY_TEST_FILES true
+// uncomment if the submission DOES NOT require you take multiple test cases
+#define _MULTIPLE_TEST_CASES true
+// uncomment if the submission DOES NOT require you to print the case number
+#define _PRINT_CASE_NUMBER true
 
+/*
+=================================
+THIS IS WHERE YOUR ALGO GOES
+=================================
+*/
 void solve() {}
+/*
+=================================
+ABOVE IS WHERE YOUR ALGO GOES
+=================================
+*/
 
-// Driver program to test above function
-int main() {
+int main(int argc, char const *argv[]) {
   // optional performance optimizations
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
@@ -19,15 +32,21 @@ int main() {
   freopen("my_ans.txt", "w", stdout);
 #endif
 
+#ifdef _MULTIPLE_TEST_CASES
   // keep this, testcases
   int t = 0;
   cin >> t;
 
   // now we can run our algo
   for (int i = 1; i <= t; ++i) {
-    // cout << "Case #" << i << ": ";
+#ifdef _PRINT_CASE_NUMBER
+    cout << "Case #" << i << ": ";
+#endif
     solve();
   }
+#else
+  solve();
+#endif
 
   return 0;
 }
