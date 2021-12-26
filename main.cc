@@ -6,7 +6,7 @@ using namespace std;
 // uncomment if the submission DOES NOT require you take multiple test cases
 #define _MULTIPLE_TEST_CASES true
 // uncomment if the submission DOES NOT require you to print the case number
-#define _PRINT_CASE_NUMBER true
+// #define _PRINT_CASE_NUMBER true
 
 /*
 =================================
