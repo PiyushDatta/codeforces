@@ -3,9 +3,9 @@
 using namespace std;
 
 // uncomment this line when submitting
-#define _MY_TEST_FILES true
+// #define _MY_TEST_FILES true
 // uncomment if the submission DOES NOT require you take multiple test cases
-#define _MULTIPLE_TEST_CASES true
+// #define _MULTIPLE_TEST_CASES true
 // uncomment if the submission DOES NOT require you to print the case number
 // #define _PRINT_CASE_NUMBER true
 
@@ -14,8 +14,39 @@ using namespace std;
 THIS IS WHERE YOUR ALGO GOES
 =================================
 */
+int check(vector<int> &plots, int i) {
+  int n = plots.size();
+  int res = 1;
+
+  for (int j = i; j < n-1; ++j) {
+    if (plots[j] >= plots[j+1]) ++res;
+    else break;
+  }
+
+  for (int j =i; j>0; --j) {
+    if (plots[j] >= plots[j-1]) ++res;
+    else break;
+  }
+
+  return res;
+}
 void solve() {
-    
+  int n = 0;
+  cin >> n;
+
+  vector<int> plots(n, 0);
+  for (int i = 0; i < n; ++i) {
+    int tmp = 0;
+    cin >> tmp;
+    plots[i] = tmp;
+  }
+
+  int res = 0;
+  for (int i=0; i<n; ++i) {
+    res = max(res, check(plots, i));
+  }
+
+  cout << res << endl;
 }
 /*
 =================================
