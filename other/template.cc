@@ -1,11 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// uncomment this line when submitting
+// comment out this line when submitting
 #define _MY_TEST_FILES true
-// uncomment if the submission DOES NOT require you take multiple test cases
+// comment out if the submission DOES NOT require you take multiple test cases
 #define _MULTIPLE_TEST_CASES true
-// uncomment if the submission DOES NOT require you to print the case number
+// comment out if the submission DOES NOT require you to print the case number
 // #define _PRINT_CASE_NUMBER true
 
 /*
