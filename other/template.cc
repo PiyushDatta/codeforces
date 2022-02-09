@@ -13,63 +13,7 @@ using namespace std;
 THIS IS WHERE YOUR ALGO GOES
 =================================
 */
-void solve() {
-  vector<pair<char, int>> res(3);
-  res[0] = {'A', 0};
-  res[1] = {'B', 0};
-  res[2] = {'C', 0};
-
-  for (int i = 0; i < 3; ++i) {
-    string tmp = "";
-    cin >> tmp;
-
-    // >
-    char char_greater = tmp[0];
-    char char_lesser = tmp[2];
-
-    if (tmp[1] == '<') {
-      swap(char_greater, char_lesser);
-    }
-
-    switch (char_greater) {
-    case 'A':
-      res[0].second += 1;
-      break;
-    case 'B':
-      res[1].second += 1;
-      break;
-    case 'C':
-      res[2].second += 1;
-      break;
-    }
-
-    switch (char_lesser) {
-    case 'A':
-      res[0].second += 2;
-      break;
-    case 'B':
-      res[1].second += 2;
-      break;
-    case 'C':
-      res[2].second += 2;
-      break;
-    }
-  }
-
-  sort(res.begin(), res.end(), [&](pair<char, int> &a, pair<char, int> &b) {
-    return a.second > b.second;
-  });
-
-  if (res[0].second == res[1].second || res[0].second == res[2].second ||
-      res[1].second == res[2].second) {
-    cout << "Impossible" << endl;
-    return;
-  }
-  for (pair<char, int> i : res) {
-    cout << i.first;
-  }
-  cout << endl;
-}
+void solve() {}
 /*
 =================================
 ABOVE IS WHERE YOUR ALGO GOES

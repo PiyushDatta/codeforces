@@ -1,8 +1,9 @@
+// https://codeforces.com/contest/1621/problem/A
 #include <bits/stdc++.h>
 using namespace std;
 
 // uncomment this line when submitting
-#define _MY_TEST_FILES true
+// #define _MY_TEST_FILES true
 // uncomment if the submission DOES NOT require you take multiple test cases
 #define _MULTIPLE_TEST_CASES true
 // uncomment if the submission DOES NOT require you to print the case number
@@ -14,61 +15,41 @@ THIS IS WHERE YOUR ALGO GOES
 =================================
 */
 void solve() {
-  vector<pair<char, int>> res(3);
-  res[0] = {'A', 0};
-  res[1] = {'B', 0};
-  res[2] = {'C', 0};
+  int n = 0;
+  int k = 0;
+  cin >> n;
+  cin >> k;
+  int tmp_k = k;
 
-  for (int i = 0; i < 3; ++i) {
-    string tmp = "";
-    cin >> tmp;
-
-    // >
-    char char_greater = tmp[0];
-    char char_lesser = tmp[2];
-
-    if (tmp[1] == '<') {
-      swap(char_greater, char_lesser);
-    }
-
-    switch (char_greater) {
-    case 'A':
-      res[0].second += 1;
-      break;
-    case 'B':
-      res[1].second += 1;
-      break;
-    case 'C':
-      res[2].second += 1;
-      break;
-    }
-
-    switch (char_lesser) {
-    case 'A':
-      res[0].second += 2;
-      break;
-    case 'B':
-      res[1].second += 2;
-      break;
-    case 'C':
-      res[2].second += 2;
-      break;
-    }
+  for (int i = 0; i < n; i += 2) {
+    --tmp_k;
   }
 
-  sort(res.begin(), res.end(), [&](pair<char, int> &a, pair<char, int> &b) {
-    return a.second > b.second;
-  });
-
-  if (res[0].second == res[1].second || res[0].second == res[2].second ||
-      res[1].second == res[2].second) {
-    cout << "Impossible" << endl;
+  if (tmp_k > 0) {
+    cout << "-1" << endl;
     return;
   }
-  for (pair<char, int> i : res) {
-    cout << i.first;
+
+  int r_j = 0;
+  int r_i = 0;
+  for (int i = 0; i < n; ++i) {
+    for (int j = 0; j < n; ++j) {
+      if (i == r_i && j == r_j) {
+        cout << "R";
+        k--;
+        if (k == 0) {
+          r_j = -1;
+          r_i = -1;
+        } else {
+          r_j += 2;
+          r_i += 2;
+        }
+        continue;
+      }
+      cout << ".";
+    }
+    cout << endl;
   }
-  cout << endl;
 }
 /*
 =================================
