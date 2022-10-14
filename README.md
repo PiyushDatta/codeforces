@@ -22,9 +22,9 @@ Current training: https://docs.google.com/spreadsheets/d/1iJZWP2nS_OB3kCTjq8L6Tr
 
 1. Copy `template.cc` into `main.cc`
 2. Put your algo into `void solve() {}`
-3. Fill out `input.txt` with whatever inputs given by problem
+3. Fill out `old_way_to_run/input.txt` with whatever inputs given by problem
    - First input in this file can be # of test cases
-4. Fill out `output.txt` with whatever outputs given by problem
+4. Fill out `old_way_to_run/output.txt` with whatever outputs given by problem
 5. Run `./run.sh` to see how your algo did!
 
 **When submitting**

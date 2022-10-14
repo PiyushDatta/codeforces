@@ -11,9 +11,9 @@ int main() {
   // check sol
   cout << endl;
   cout << "Checking solutions..." << endl << endl;
-  ifstream my_ans_file("my_ans.txt");
+  ifstream my_ans_file("old_way_to_run/my_ans.txt");
   string my_ans_str;
-  ifstream solution_file("output.txt");
+  ifstream solution_file("old_way_to_run/output.txt");
   string solution_str;
   int test_counter = 1;
 

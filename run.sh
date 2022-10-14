@@ -18,10 +18,10 @@ mkdir -p out || {
 
 # compile main.cc
 echo "Compiling file main.cc..."
-echo "Running command: g++ -std=c++14 -o out/main.exe main.cc"
-g++ -std=c++14 -o out/main.exe main.cc || {
+echo "Running command: g++ -std=c++14 -o out/main.exe old_way_to_run/main.cc"
+g++ -std=c++14 -o out/main.exe old_way_to_run/main.cc || {
     echo
-    echo "command failed: g++ -std=c++14 -o out/main.exe main.cc"
+    echo "command failed: g++ -std=c++14 -o out/main.exe old_way_to_run/main.cc"
     false
 }
 
@@ -35,10 +35,10 @@ echo "Compiled successfully, running main.exe"
 
 # compile check.cc
 echo "Compiling file check.cc..."
-echo "Running command: g++ -std=c++14 -o out/check.exe check.cc"
-g++ -std=c++14 -o out/check.exe check.cc || {
+echo "Running command: g++ -std=c++14 -o out/check.exe old_way_to_run/check.cc"
+g++ -std=c++14 -o out/check.exe old_way_to_run/check.cc || {
     echo
-    echo "command failed: g++ -std=c++14 -o out/check.exe check.cc"
+    echo "command failed: g++ -std=c++14 -o out/check.exe old_way_to_run/check.cc"
     false
 }
 
